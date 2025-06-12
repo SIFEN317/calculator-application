@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,16 +21,15 @@ body {
 
 
 #display{
-    padding: 20px;
     width: 100%;
+   padding: 20px;
     font-size: 5rem;
     text-align: left;
     border: none;
     background-color: hsl(0, 0%, 20%);
     color: white;
 }
-
-
+}
 #keys{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
