@@ -1,44 +1,68 @@
-const display = document.getElementById('display')
 
 
-  document.querySelectorAll('[data-number]').forEach(button => {
-    button.addEventListener('click',() => {
-        display.value += button.dataset.number})
+let display = document.getElementById('display')
+
+let numB = document.querySelectorAll('[data-number]')
+
+numB.forEach(button => {
+    button.addEventListener('click', () => {
+        display.value += button.dataset.number
+    })
+})
 
 
 let firstNumber = null;
 let operator = null;
-// parseFloat used to change the string to number
-document.getElementById('plus').addEventListener
-('click', () => {
-    firstNumber = parseFloat(display.value);
-    operator = '+';
-    display.value = '';
-});
 
-document.getElementById('equals').addEventListener
-('click', () => {
-    if(firstNumber !== null && operator === '+') {
-        const secondNumber = parseFloat(display.value);
-        const result = firstNumber + secondNumber;
-        display.value = result;
-        firstNumber = null;
+let opB = document.querySelectorAll('[data-operator]')
+
+
+opB.forEach(button => {
+    button.addEventListener('click', () => {
+        firstNumber = parseFloat(display.value)
+        operator = button.dataset.operator;
+        display.value =""
+    })
+ })
+
+ let eqB = document.getElementById('equals')
+
+ eqB.addEventListener('click', () => {
+    let secondNumber = parseFloat(display.value);
+    let result = null;
+
+    if(operator === "+") {
+        result = firstNumber + secondNumber
     }
-})
+    else if (operator === "-") {
+        result = firstNumber - secondNumber
+    }
+     else if (operator === "*") {
+        result = firstNumber * secondNumber
+    }
+     else if (operator === "/") {
+        if(secondNumber === 0 ) {
+            result = "Error"
+        } else{
+        result = firstNumber / secondNumber}
+    }
+    else if (result === null) {
+        display.value = "Invalid Operation"
+    } else {
+        display.value === result;
+    }
 
-,
+    display.value = result
+    
+ });
 
-document.getElementById('clear').addEventListener
-('click', () => {
-    display.value ='';
+
+ const clB = document.getElementById('clear');
+
+ clB.addEventListener('click', () => {
+    display.value = null;
     firstNumber = null;
-    operator = null;
-
-})
-// then the clear button is clicked display value will be emplity and also first number and operator will be empity 
-
-
-
-
+    secondNumber = null;
+ })
 
 

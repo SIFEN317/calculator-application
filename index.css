@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-      background-color: hsl(0, 0%, 95%); 
+    background-color: hsl(0, 0%, 95%); 
 
 }
 
@@ -63,7 +63,7 @@ button:active{
 }
 
 .operator-btn {
-    background-color: hsl(26, 85%, 49%);
+    background-color: hsl(26, 72%, 48%);
 }
 
 .operator-btn:hover {
