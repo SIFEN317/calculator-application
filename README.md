@@ -26,7 +26,7 @@ This is a simple calculator app built using HTML, CSS, and JavaScript. It can pe
 
 # About Me
 
-This project was created by Abita as part of learning frontend development.
+This project was created by sifen as part of learning frontend development.
 
-GitHub: [https://github.com/SIFEN317](https://github.com/SIFEN317)
+GitHub: [https://github.com/SifenAbduselam](https://github.com/SifenAbduselam)
 
